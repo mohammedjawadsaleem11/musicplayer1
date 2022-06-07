@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@600&family=Roboto:wght@300;400&display=swap");
+/*Background*/
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #0e6cc4;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+/*waves****************************/
+
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(80deg);
+	left: 0;
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: #0af;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 14000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 17000ms infinite linear;
+	position: fixed;
+	background-color: #77daff;
+}
+
+.wave.-two {
+  animation: drift 21000ms infinite linear;
+  opacity: .1;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 14;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: #25a7d7;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+
+
+
+/*background end
+for wave animation i have used drift
+
+*/
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    color:black;
+    font-family:"Lato",sans-serif;
+    /*background-color: #fbab7e;
+    background-image:linear-gradient(62deg,#fbab7e 0%,#f7ce68 100%);
+    overflow:hidden;
+    background-image:linear-gradient(90deg, #FF9A88 55%,#FF99AC 100%);*/
+}
+.bg{
+    position:absolute;
+    top:450px;
+}
+.bg img{
+    width:600px;
+}
+.bg .girl{
+    position:absolute;
+    left:770px;
+    bottom:35px;
+    width:750px;
+}
+
+.player{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper{
+    width:350px;
+    padding:30px 40px;
+    border-radius: 20px;
+    box-shadow: rgb(50, 50, 93,0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10,37,64,0.35) 0px -2px 6px 0px inset;
+    background-color:white;
+}
+
+.details{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-art{
+    margin: 20px auto;
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border:2px solid #fff;
+    box-shadow: 0px 6px 5px #ccc;
+    box-shadow:0px 6px 5px rgba(33,30,30,0.701),
+    -0px -4px 5px rgba(71,71,0,021) ;
+}
+
+.now-playing{
+    font-size: 25px;
+}
+
+.track-artist{
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: "Roboto",sans-serif;
+    margin-top:3px;
+    color:rgba(0,0,0,0.714);
+}
+
+.button{
+    width:90%;
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button i{
+    opacity: 0.97;
+    padding:13px;
+    font-size: 30px;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+.button i:hover{
+    color: #232123;
+}
+
+.button .playpause-track i{
+    font-size:65px;
+}
+
+.slider_container{
+    
+    width:100%;
+    margin: 20px auto;
+    margin-bottom: 30px;
+    position:relative;
+}
+
+.current-time,  .total-duration{
+    position:absolute;
+    color:rgba(0,0,0,0,.74);
+    font-family: cursive;
+    font-size: 13px;
+
+}
+
+.current-time{
+    padding-top:30px;
+    left:0;
+}
+
+.total-duration{
+    padding-top:10px;
+    right:0;
+}
+
+.seek_slider{
+    width:100%;
+    border-radius:20px;
+    appearance: none;
+    height:4px;
+    background: #83a9ff;
+    transition:opacity 0.3s;
+
+}
+
+.seek_slider::-webkit-slider-thumb{
+    appearance: none;
+    width:13px;
+    height:13px;
+    background-color: white;
+    border:3px solid #3774ff;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.rotate{
+    animation:rotation 9s infinite linear;
+
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+    
+}
+
+.fa-random{
+    margin-right: 5px;
+
+}
+
+.repeat-track{
+    margin-left:5px;
+}
+.owner{
+  margin-top:29px;
+  
+}
+.owner a{
+  text-decoration: none;
+  color:black;
+}
